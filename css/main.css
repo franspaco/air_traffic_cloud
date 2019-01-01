@@ -1,0 +1,109 @@
+
+
+html {
+    /* background-color: black; */
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#container {
+    height: 100vh;
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+}
+
+#tag {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#list {
+    /* padding-left: 10px; */
+    background-color: #eeeeee;
+    width: 25%;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-size: 0.8em;
+}
+
+#list > h3, #panel > h3 {
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+#legend {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.404);
+    color: white;
+}
+
+#legend p {
+    margin-left: 15px;
+    margin-right: 10px;
+}
+
+.mini-box{
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+}
+
+#table-footer {
+    margin-left: 15px;
+}
+
+.ht {
+    font-weight: 500;
+}
+
+.flexcontainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.data-box {
+    margin-right: 15px;
+    margin-bottom: 25px;
+    min-width: 65px;
+    height: 30px;
+}
+
+#resize_button {
+    font-size: 0.7em;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#compass_rose {
+    position: absolute;
+    top: 15px;
+    left: 30px;
+}
