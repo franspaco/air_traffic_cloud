@@ -133,19 +133,6 @@ APP.createObjects = async function(){
 }
 
 APP.update = function(delta){
-    // Interpolate aircraft locations
-    for (const airplaneId in AIRPLANES.data) {
-        if (AIRPLANES.data.hasOwnProperty(airplaneId)){
-            var airplane = AIRPLANES.data[airplaneId].airplane;
-            var spd = AIRPLANES.data[airplaneId].info.Spd;
-            var vspd = AIRPLANES.data[airplaneId].info.Vsi;
-            var hdg = deg2rad(AIRPLANES.data[airplaneId].info.Trak-90);
-            airplane.position.x += spd *1.852*0.000277778*0.5418*delta/1000*Math.cos(hdg);
-            airplane.position.z += spd *1.852*0.000277778*0.5418*delta/1000*Math.sin(hdg);
-            airplane.position.y += vspd/60*0.0003048*APP.constants.height_scaling*delta/1000;
-        }
-    }
-
     // Rotate compass rose
     var angle = this.controls.getAzimuthalAngle();
     this.rose.css('transform', 'rotate(' + angle + 'rad)');
